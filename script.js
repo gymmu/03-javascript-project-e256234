@@ -37,3 +37,17 @@ export function aufgabe03(args){
   }
   return count
 }
+export function aufgabe04(args){
+  const input = args
+  const result = []
+  let count = 1
+  for (let i=0; i < input.length; i++){
+    const currentElement = input[i]
+    if (currentElement === " "){
+   count = count + 1
+   
+    }
+  } 
+  return count
+}
+
