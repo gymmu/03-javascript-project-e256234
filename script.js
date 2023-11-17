@@ -122,3 +122,15 @@ export function aufgabe12 (args) {
   }
   return - 1
 }
+export function aufgabe13 (args) {
+  const input = args
+  const result = []
+  let posE = -1
+  for (let i = (input.length-1); i>= 0; i--) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+    return i
+    }
+  }
+  return - 1 
+}
