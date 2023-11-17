@@ -50,4 +50,19 @@ export function aufgabe04(args){
   } 
   return count
 }
-
+export function aufgabe05(args){
+  const input = args
+  const result = []
+  let count = 0
+  for (let i=0; i < input.length; i++){
+    const currentElement = input[i]
+    if (currentElement === currentElement.toUpperCase()){
+      count = count + 1
+    } 
+  }
+  if(count > 0) {
+    return true
+  } else {
+    return false
+  }
+}
