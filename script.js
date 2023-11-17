@@ -66,3 +66,13 @@ export function aufgabe05(args){
     return false
   }
 }
+export function aufgabe06(args){
+  const input = args
+  const result = []
+  for (let i=0; i < input.length; i++){
+    const currentElement = input[i]
+   if (currentElement === ".")
+   return true
+  }
+  return false 
+}
