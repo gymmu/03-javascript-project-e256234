@@ -98,3 +98,16 @@ export function aufgabe09 (args) {
   }
   return false
 }
+export function aufgabe11 (args) {
+  const input = args
+  const result = []
+
+if (input.length > 1){
+  return null
+}
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    return currentElement.charCodeAt(0)
+  }
+  return null
+}
