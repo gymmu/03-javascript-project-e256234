@@ -81,8 +81,13 @@ export function aufgabe07(args){
   const result = []
   for (let i=0; i < input.length; i++){
     const currentElement = input[i]
-    if (currentElement === "und")
-    return true
+    if (currentElement === "u"){
+      if (input[i+1]=== "n"){
+        if (input[i+2]=== "d"){
+          return true
+        }
+      }
+    }
   }
   return false
 }
