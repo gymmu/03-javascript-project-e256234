@@ -217,4 +217,23 @@ for (let i = 0; i < text.length; i++) {
 }
 return [listFirst.join(""), listSecond.join("")]
 }
+export function aufgabe17 (args) {
+  const text = args
+  const phrases = []
+  let currentPhrase = []
+  for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
+    if (currentElement === ',') {
+      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      phrases.push(currentPhrase.join(""))
+      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+    } else {
+      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      currentPhrase.push(currentElement)
+    }
+  }
+  
+  return (phrases)
+  }
+  
 
