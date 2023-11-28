@@ -172,3 +172,18 @@ export function aufgabe10 (args) {
  }
   return true
 }
+export function aufgabe14 (args) {
+  const input = args
+  let pos = -1
+  let countE = 0 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement === "e"){
+    countE++
+    if(countE === 3){
+      pos = i
+    }
+  }
+}
+  return pos 
+}
