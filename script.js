@@ -199,3 +199,22 @@ export function aufgabe15 (args) {
   }
   return result.join("")
 }
+export function aufgabe16 (args) {
+  const text = args
+  let switchFirst = true
+const listFirst = []
+const listSecond = []
+for (let i = 0; i < text.length; i++) {
+  if (text[i] === "$") {
+    switchFirst = false
+  } else {
+    if (switchFirst === true) {
+      listFirst.push(text[i])
+    } else {
+      listSecond.push(text[i])
+    }
+  }
+}
+return [listFirst.join(""), listSecond.join("")]
+}
+
