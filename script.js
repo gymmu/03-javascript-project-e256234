@@ -235,13 +235,28 @@ export function aufgabe17 (args) {
   
   return (phrases)
   }
-  export function aufgabe18 (args) {
-    const input = args
-    const result = []
-    for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-      
+  
+export function aufgabe18 (args) {
+  const text = args
+  let switchFirst = true
+const listFirst = []
+const listSecond = []
+for (let i = 0; i < text.length; i++) {
+  if (text[i] === " ") {
+    switchFirst = false
+  } else {
+    if (switchFirst === true) {
+      listFirst.push(text[i])
+    } else {
+      listSecond.push(text[i])
     }
-    return result.join("")
   }
+ }
 
+ const name = listFirst.join("")
+ const age = listSecond.join("")
+
+ return "Sie heissen " + name + " und sind " + age + " Jahre alt"
+
+}
+    
