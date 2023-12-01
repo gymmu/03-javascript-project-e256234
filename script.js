@@ -259,4 +259,14 @@ for (let i = 0; i < text.length; i++) {
  return "Sie heissen " + name + " und sind " + age + " Jahre alt"
 
 }
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+   result.push(currentElement)
+   result.push(currentElement)
+  }
+  return result.join("")
+}
     
