@@ -265,8 +265,22 @@ export function aufgabe19 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
    result.push(currentElement)
-   result.push(currentElement)
+   result.push(currentElement)//es wird 2 mal hingeschrieben und dadurch verdoppelt. 
   }
   return result.join("")
 }
-    
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement === "."){//prüfen ob das nächste Zeichen ein Lehrzeichen ist
+   if(input[i+1]===" "){
+    return true
+   }
+   else {return false}
+  }
+  
+}
+return result.join("")
+}
