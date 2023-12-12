@@ -57,11 +57,11 @@ export function aufgabe05(args){
   for (let i=0; i < input.length; i++){
     const currentElement = input[i]
     if (currentElement === currentElement.toUpperCase()){
-      count = count + 1
+      count = count + 1//dadurch werden die Grossbuchstaben gezählt.
     } 
   }
   if(count > 0) {
-    return true
+    return true// wenn es ein Grossbuchstabe ist wird es richtig gezählt ansonsten falsch. 
   } else {
     return false
   }
@@ -283,4 +283,48 @@ export function aufgabe20 (args) {
   
 }
 return result.join("")
+}
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+export function aufgabe24(args) {
+  const input = args
+  const result = []
+
+  if (input.length === 1)  return input
+  
+  const firstElement = input[0]
+  const lastElement = input[input.length - 1]
+
+result.push(lastElement)
+  for (let i = 1; i < input.length - 1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)// anhängen an die resultate liste. 
+  }
+  result.push(firstElement)
+  
+  return result.join("")
+}
+export function bubbleSort(args){
+const text = args
+const list = text.split("") // text wird in Liste umgewandelt. Elemente können vertauscht werden. 
+for (let i = 0; i < list.length - 1; i++) {
+  const currentElement = list[i]
+  const nextElement = list[i + 1]
+  if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    // elemente werden da es die Falsche Reihenfolge ist vertauscht. 
+    const tmp = list[i + 1]// zwischenzeitlich gespeichert(wert)
+    list[i + 1] = list[i]
+    list[i] = tmp
+    i = -1 // von vorne starten
+  }
+}
+const result = list.join("")
+return result
 }
