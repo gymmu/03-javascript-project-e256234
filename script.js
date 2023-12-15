@@ -3,7 +3,7 @@ export function aufgabe01(args) {
   const result = []
   for (let i=0; i < input.length; i++){
     const currentElement = input[i]
-    if ( currentElement === "e"){
+    if ( currentElement === "e"){//durch currentElement wir das e als Element geprüfft. 
 
     } else if (currentElement === "E"){
 
@@ -239,13 +239,13 @@ export function aufgabe17 (args) {
 export function aufgabe18 (args) {
   const text = args
   let switchFirst = true
-const listFirst = []
+const listFirst = []//für den Namen und das alter rstellt man zwei Listen, weil es zwei Elemente sind. 
 const listSecond = []
 for (let i = 0; i < text.length; i++) {
-  if (text[i] === " ") {
+  if (text[i] === " ") {//wenn es ein Lehrzeichen ist wird es als switchFirst als falsch gezählt und geändert.
     switchFirst = false
   } else {
-    if (switchFirst === true) {
+    if (switchFirst === true) {//wenn es als true gezählt wird wird zuerst di erste und danach die zweite Liste eingefügt. 
       listFirst.push(text[i])
     } else {
       listSecond.push(text[i])
@@ -256,7 +256,7 @@ for (let i = 0; i < text.length; i++) {
  const name = listFirst.join("")
  const age = listSecond.join("")
 
- return "Sie heissen " + name + " und sind " + age + " Jahre alt"
+ return "Sie heissen " + name + " und sind " + age + " Jahre alt"//namen und alter werden in den Satz eingefügt und so geprüft.
 
 }
 export function aufgabe19 (args) {
@@ -327,4 +327,24 @@ for (let i = 0; i < list.length - 1; i++) {
 }
 const result = list.join("")
 return result
+}
+export function aufgabe22 (args) {
+  const text = args
+  let switchFirst = true
+const listFirst = []
+const listSecond = []
+
+for (let i = 0; i < text.length; i++) {
+  if (text[i] === "k") {//wenn das Element ein k ist ist switchFirst falsch
+    switchFirst = false
+  } else {
+    if (switchFirst === true) { 
+      listFirst.push("_")//welches element vorkommt bis ein k vorhanden ist. 
+    } else {
+      listSecond.push(text[i])
+    }
+  }
+ }
+ return listFirst.join("") + listSecond.join("")//die zwei Listen werden zusammen gefügt. 
+ 
 }
