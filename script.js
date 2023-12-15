@@ -288,7 +288,7 @@ export function aufgabe21(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    const currentElement = input[i]//currentElement wird als input[i] definiert.
     
   }
   return result.join("")
@@ -313,12 +313,12 @@ result.push(lastElement)
 }
 export function bubbleSort(args){
 const text = args
-const list = text.split("") // text wird in Liste umgewandelt. Elemente können vertauscht werden. 
+const list = text.split("") // Text wird in Liste umgewandelt. Elemente können vertauscht werden. 
 for (let i = 0; i < list.length - 1; i++) {
   const currentElement = list[i]
   const nextElement = list[i + 1]
   if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-    // elemente werden da es die Falsche Reihenfolge ist vertauscht. 
+    // Elemente werden da es die Falsche Reihenfolge ist vertauscht. 
     const tmp = list[i + 1]// zwischenzeitlich gespeichert(wert)
     list[i + 1] = list[i]
     list[i] = tmp
